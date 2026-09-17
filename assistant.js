@@ -81,7 +81,7 @@ function createAssistant() {
         <button class="assistant__send" type="submit">Спросить</button>
       </form>
     </div>
-    <button class="assistant__btn" type="button" aria-expanded="false">AI</button>
+    <button class="assistant__btn" type="button" aria-expanded="false">Напишите нам</button>
   `;
   document.body.appendChild(root);
 
