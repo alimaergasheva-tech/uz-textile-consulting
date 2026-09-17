@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Заявка — UZ Textile Consulting</title>
+    <meta name="description" content="Оставьте заявку на консультацию. Ташкент, ул. Бабура, 42." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="theme-contact" data-page="contact">
+    <a class="skip" href="#main">К содержанию</a>
+    <header class="header">
+      <div class="header__inner">
+        <a class="logo" href="index.html" aria-label="UZ Textile Consulting">
+          <span class="logo__mark" aria-hidden="true"></span>
+          <span class="logo__text">UZ Textile Consulting</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          <span class="nav-toggle__bar"></span>
+          <span class="visually-hidden">Меню</span>
+        </button>
+        <nav class="nav" id="site-nav">
+          <a href="index.html">Бюро</a>
+          <a href="services.html">Услуги</a>
+          <a href="process.html">Процесс</a>
+          <a href="cases.html">Кейсы</a>
+          <a href="contact.html" class="nav__cta">Заявка</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="section">
+        <div class="contact glass">
+          <div class="contact__copy">
+            <h1>Заявка на консультацию</h1>
+            <p>Ресепшн бюро: опишите площадку и задачу. Ответим в течение одного рабочего дня.</p>
+            <ul class="contact__meta">
+              <li>Ташкент, ул. Бабура, 42</li>
+              <li><a href="tel:+998901234567">+998 90 123 45 67</a></li>
+              <li><a href="mailto:hello@uztextile.consulting">hello@uztextile.consulting</a></li>
+            </ul>
+          </div>
+          <form class="form" id="lead-form" novalidate>
+            <div class="form__row">
+              <label>Имя <input type="text" name="name" autocomplete="name" required /></label>
+              <label>Компания <input type="text" name="company" autocomplete="organization" required /></label>
+            </div>
+            <div class="form__row">
+              <label>Телефон <input type="tel" name="phone" autocomplete="tel" required /></label>
+              <label>Почта <input type="email" name="email" autocomplete="email" required /></label>
+            </div>
+            <label>
+              Задача
+              <select name="topic" required>
+                <option value="">Выберите направление</option>
+                <option>Запуск производства</option>
+                <option>Экспорт</option>
+                <option>Сертификация</option>
+                <option>Эффективность цеха</option>
+                <option>Инвестиции</option>
+                <option>Обучение</option>
+              </select>
+            </label>
+            <label>
+              Комментарий
+              <textarea name="message" rows="4" placeholder="Город, тип производства, что нужно получить"></textarea>
+            </label>
+            <p class="form__error" id="form-error" hidden></p>
+            <p class="form__ok" id="form-ok" hidden>Заявка принята. Напишем вам в рабочее время.</p>
+            <button class="btn btn--solid" type="submit">Отправить заявку</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section__head">
+          <h2>Частые вопросы</h2>
+        </div>
+        <div class="faq">
+          <details class="glass" open>
+            <summary>Работаете только с крупными кластерами?</summary>
+            <p>Нет. Берём средние фабрики, если есть понятный запрос и ответственный на площадке.</p>
+          </details>
+          <details class="glass">
+            <summary>Нужно ли присутствие консультанта на заводе?</summary>
+            <p>Для аудита цеха — да, хотя бы на диагностику. Документы и переговоры с байерами частично идут удалённо.</p>
+          </details>
+          <details class="glass">
+            <summary>На каком языке ведёте переговоры с ЕС?</summary>
+            <p>Русский, узбекский и английский. Коммерческие пакеты для Европы — на английском.</p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__brand">UZ Textile Consulting</p>
+      <p>Консалтинг текстильных производств Узбекистана</p>
+      <a href="index.html">На главную</a>
+    </footer>
+    <script src="script.js"></script>
+    <script src="assistant.js"></script>
+  </body>
+</html>

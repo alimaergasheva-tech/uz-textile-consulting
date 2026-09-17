@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Услуги — UZ Textile Consulting</title>
+    <meta name="description" content="Запуск производства, экспорт, сертификация, эффективность цеха и обучение команд." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="theme-services" data-page="services">
+    <a class="skip" href="#main">К содержанию</a>
+    <header class="header">
+      <div class="header__inner">
+        <a class="logo" href="index.html" aria-label="UZ Textile Consulting">
+          <span class="logo__mark" aria-hidden="true"></span>
+          <span class="logo__text">UZ Textile Consulting</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          <span class="nav-toggle__bar"></span>
+          <span class="visually-hidden">Меню</span>
+        </button>
+        <nav class="nav" id="site-nav">
+          <a href="index.html">Бюро</a>
+          <a href="services.html">Услуги</a>
+          <a href="process.html">Процесс</a>
+          <a href="cases.html">Кейсы</a>
+          <a href="contact.html" class="nav__cta">Заявка</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="section">
+        <div class="section__head">
+          <h1>Услуги бюро</h1>
+          <p>Оливковая библиотека образцов: берём участок цепочки, который тормозит завод — от станков до контракта с байером.</p>
+        </div>
+        <div class="filters" role="tablist" aria-label="Фильтр услуг">
+          <button class="filters__btn is-active" type="button" data-filter="all" role="tab" aria-selected="true">Все</button>
+          <button class="filters__btn" type="button" data-filter="launch" role="tab" aria-selected="false">Запуск</button>
+          <button class="filters__btn" type="button" data-filter="market" role="tab" aria-selected="false">Рынок</button>
+          <button class="filters__btn" type="button" data-filter="shopfloor" role="tab" aria-selected="false">Цех</button>
+        </div>
+        <div class="cards">
+          <article class="card glass" data-cat="launch">
+            <h3>Запуск производства</h3>
+            <p>Подбор оборудования, планировка цеха, лицензии и связка с кластерами. Вы получаете календарь запуска, а не стопку слайдов.</p>
+          </article>
+          <article class="card glass" data-cat="market">
+            <h3>Экспорт и байеры</h3>
+            <p>Карта рынков, требования ритейла, подготовка коммерческого предложения и сопровождение первых отгрузок.</p>
+          </article>
+          <article class="card glass" data-cat="market">
+            <h3>Сертификация</h3>
+            <p>GOTS, OEKO-TEX, BCI, социальные аудиты. Закрываем разрывы до визита аудитора.</p>
+          </article>
+          <article class="card glass" data-cat="shopfloor">
+            <h3>Эффективность цеха</h3>
+            <p>Потери на переналадке, брак, расход сырья и простои. Считаем в метрах ткани и сумах.</p>
+          </article>
+          <article class="card glass" data-cat="launch">
+            <h3>Инвестиции</h3>
+            <p>Due diligence площадки, финансовая модель линии и переговоры с фондами.</p>
+          </article>
+          <article class="card glass" data-cat="shopfloor">
+            <h3>Обучение команд</h3>
+            <p>Смены мастеров, отдел качества и коммерция: короткие сессии на площадке.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__brand">UZ Textile Consulting</p>
+      <p>Консалтинг текстильных производств Узбекистана</p>
+      <a href="contact.html">Связаться</a>
+    </footer>
+    <script src="script.js"></script>
+    <script src="assistant.js"></script>
+  </body>
+</html>
