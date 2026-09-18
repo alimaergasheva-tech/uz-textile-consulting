@@ -66,12 +66,22 @@ form?.addEventListener("submit", async (event) => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
     });
-    if (!response.ok) throw new Error("send");
+    const result = await response.json().catch(() => ({}));
+    if (!response.ok || !result.ok) {
+      const reason = result.error || "";
+      if (reason === "missing_env") {
+        throw new Error("env");
+      }
+      throw new Error("send");
+    }
     formOk.hidden = false;
     form.reset();
-  } catch {
+  } catch (err) {
     formError.hidden = false;
-    formError.textContent = "Не удалось отправить заявку. Напишите на почту или в Telegram.";
+    formError.textContent =
+      err.message === "env"
+        ? "На Vercel не заданы TELEGRAM_BOT_TOKEN и TELEGRAM_CHAT_ID. Добавьте их и сделайте Redeploy."
+        : "Не удалось отправить в Telegram. Откройте личку с ботом и нажмите Start.";
   }
 });
 

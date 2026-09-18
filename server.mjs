@@ -1,8 +1,12 @@
+import { createRequire } from "module";
 import { createServer } from "http";
 import { readFileSync, existsSync } from "fs";
 import { extname, join, normalize } from "path";
 import { fileURLToPath } from "url";
-import { sendLead } from "./api/lead.js";
+
+const require = createRequire(import.meta.url);
+const leadApi = require("./api/lead.js");
+const sendLead = leadApi.sendLead;
 
 const root = fileURLToPath(new URL(".", import.meta.url));
 const envPath = join(root, ".env.local");
