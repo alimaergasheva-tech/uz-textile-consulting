@@ -42,9 +42,10 @@ filters.forEach((btn) => {
   });
 });
 
-form?.addEventListener("submit", (event) => {
+form?.addEventListener("submit", async (event) => {
   event.preventDefault();
   formOk.hidden = true;
+  formError.hidden = true;
   const data = new FormData(form);
   const required = ["name", "company", "phone", "email", "topic"];
   const missing = required.some((key) => !String(data.get(key) || "").trim());
@@ -58,9 +59,20 @@ form?.addEventListener("submit", (event) => {
     return;
   }
 
-  formError.hidden = true;
-  formOk.hidden = false;
-  form.reset();
+  const payload = Object.fromEntries(data.entries());
+  try {
+    const response = await fetch("/api/lead", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+    if (!response.ok) throw new Error("send");
+    formOk.hidden = false;
+    form.reset();
+  } catch {
+    formError.hidden = false;
+    formError.textContent = "Не удалось отправить заявку. Напишите на почту или в Telegram.";
+  }
 });
 
 function drawLoom(highlight = -1) {
